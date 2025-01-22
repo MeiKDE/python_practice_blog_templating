@@ -3,7 +3,7 @@ import requests
 from post import Post
 
 app = Flask(__name__)
-blog_url = "https://api.npoint.io/48e6ee09c985b1f9c133"
+blog_url = "https://api.npoint.io/1ee82c6ce9e5d3efc2bf"
 response = requests.get(blog_url)
 posts = response.json()
 
@@ -37,4 +37,4 @@ def show_post(index):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
